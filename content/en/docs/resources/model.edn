@@ -1,6 +1,12 @@
-{;; plan: represent data in libs.md
+{
+ ;; This file is a pure data representation of the "Tools and libraries" page.
  ;;
- ;; process: do it incrementally, move one section at a time.
+ ;; To update the "Tools and libraries" page,
+ ;;
+ ;;  1. Make any data changes to this file
+ ;;  2. Make any generation changes to gen.clj
+ ;;  3. Run ./gen.clj libs.md to regenerate libs.md
+ ;;
  :tags
  [{:tag/id "array", :tag/description "array programming"}
   {:tag/id "tensor", :tag/description "tensor programming"}
@@ -31,13 +37,6 @@
   {:tag/id "cljs", :tag/description "supports not only Clojure but also Clojurescript"}
   {:tag/id "nlp", :tag/description "natural language processing"}]
 
- :teodorlu/questions [
-                      ;; I'm having a bit of a hard time understanding the motivation between having both the star
-                      ;; and :readiness :experimental. Does that mean /some/ of the API is considered stable, but
-                      ;; the library is still under active development, and collaboration is invited?
-                      ;;
-                      ;; Perhaps we can be even clearer on what the call to action / "job to be done" for tags :)
-                      ]
  :libs
  [;; # Diverse toolsets
   ({:lib/name "fastmath",
